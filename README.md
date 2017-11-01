@@ -26,15 +26,13 @@ sudo npm install -g npm
 (sudo については環境で読み替えてください)  
 
 
-## gulpインストール
-
-### グローバルにインストール（初回のみ）
+## gulpをグローバルにインストール（初回のみ）
 
 ```
 sudo npm install -g gulp
 ```  
 
-### 各プロジェクトにインストール
+## 各プロジェクトにインストール
 ここからはプロジェクトごとに行う作業
 プロジェクトフォルダに移動
 
@@ -42,13 +40,13 @@ sudo npm install -g gulp
 cd C:\hoge\fuga\piyo\ProjectDirectory
 ```
 
-### package.jsonの作成
+#### package.jsonの作成
 
 ```
 npm init
 ```
 
-### gulpのローカルインストール
+#### gulpのローカルインストール
 
 ```
 npm install gulp --save-dev
@@ -56,7 +54,7 @@ npm install gulp@3.9.1 --save-dev （バージョン洗濯する場合）
 ```
 できる限りバージョンはCLIと合わせる。
 
-#### --saveと--save-dev
+##### --saveと--save-dev
 違いはようわからんすのでgoogleさんに聞いて。  
 で、なんで付けるかというとnpm install で --save をつけると、 package.json にインストールしたパッケージ名とそのバージョンが自動的に保存され、他で同じ環境を作ることが出来る。
 
