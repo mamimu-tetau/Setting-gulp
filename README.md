@@ -32,6 +32,7 @@ sudo npm install -g gulp
 
 ## 各プロジェクトにインストール
 ここからはプロジェクトごとに行う作業
+
 プロジェクトフォルダに移動
 
 ```
@@ -59,3 +60,51 @@ npm install gulp@3.9.1 --save-dev （バージョン洗濯する場合）
 
 参考
 https://www.webprofessional.jp/introduction-gulp-js/
+
+
+## Gulpプラグインをインストール
+
+##### Sassコンパイル + browser-sync
+```
+npm install gulp-sass gulp-autoprefixer gulp-sourcemaps gulp-filter gulp-notify gulp-plumber browser-sync --save-dev
+```  
+
+* gulp-sass Sassのコンパイル
+* gulp-autoprefixer PostCSSのベンダープレフィクス自動化　だれかPostCSSでの書き方教えて
+* gulp-sourcemaps　CSSのソースマップ作成　他にもいいのあればアップデートしたい
+* gulp-filter　ストリームの中身をグロブパターンによって抽出したファイルだけに
+* gulp-notify　デスクトップ通知
+* gulp-plumber エラーが発生しても落ちないように  
+* browser-sync ファイル変更を監視し、自動でブラウザリロードを行ってくれる  
+
+
+##### + Minify
+```
+npm install gulp-cssmin gulp-imagemin imagemin-mozjpeg gulp-uglify imagemin-pngquant --save-dev
+```  
+
+* gulp-cssmin CSS Minify
+* gulp-imagemin 画像圧縮
+* imagemin-mozjpeg jpg圧縮（要検討）
+* imagemin-pngquant png圧縮（要検討）
+* gulp-uglify js圧縮（要検討） 
+ 
+
+
+## 静的サイトのディレクトリ構成
+
+project
+  ├── node_modules
+  ├── public_html（納品用）
+  ├── src（開発用）
+  │   ├── **/*.html
+  │   └── assets
+  │       ├── css
+  │       ├── images
+  │       ├── js
+  │       ├── sass
+  ├── gulpfile.js
+  ├── package.json
+
+
+
