@@ -107,4 +107,15 @@ project
   ├── package.json
 ```
 
+## Gulpバージョン変更
+##### グローバル
+```
+sudo npm uninstall -g gulp
+sudo npm install -g gulp
+```
 
+##### ローカル
+```
+npm uninstall gulp --save-dev
+npm install gulp --save-dev
+```
