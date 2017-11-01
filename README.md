@@ -102,7 +102,7 @@ project
   │       ├── css
   │       ├── images
   │       ├── js
-  │       ├── sass
+  │       ├── scss
   ├── gulpfile.js
   ├── package.json
 ```
