@@ -92,7 +92,7 @@ npm install gulp-cssmin gulp-imagemin imagemin-mozjpeg gulp-uglify imagemin-pngq
 
 
 ## 静的サイトのディレクトリ構成
-
+```
 project
   ├── node_modules
   ├── public_html（納品用）
@@ -105,6 +105,6 @@ project
   │       ├── sass
   ├── gulpfile.js
   ├── package.json
-
+```
 
 
