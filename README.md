@@ -28,14 +28,13 @@ sudo npm install -g npm
 
 ## gulpインストール
 
-### まずはグローバルにインストール（初回のみ）
+### グローバルにインストール（初回のみ）
 
 ```
 sudo npm install -g gulp
 ```  
 
 ### 各プロジェクトにインストール
-----------------------
 ここからはプロジェクトごとに行う作業
 プロジェクトフォルダに移動
 
@@ -43,15 +42,11 @@ sudo npm install -g gulp
 cd C:\hoge\fuga\piyo\ProjectDirectory
 ```
 
-
-
 ### package.jsonの作成
 
 ```
 npm init
 ```
-
-
 
 ### gulpのローカルインストール
 
