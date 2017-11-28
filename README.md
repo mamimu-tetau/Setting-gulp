@@ -97,6 +97,7 @@ project
   ├── node_modules
   ├── public_html（納品用）
   ├── src（開発用）
+  │   ├── scss/*.scss
   │   ├── **/*.html
   │   └── assets
   │       ├── css
