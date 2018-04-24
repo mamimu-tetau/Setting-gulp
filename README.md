@@ -120,3 +120,6 @@ sudo npm install -g gulp
 npm uninstall gulp --save-dev
 npm install gulp --save-dev
 ```
+
+## BrowserSync
+はまりどころbodyタグ抜けてるとダメす
