@@ -18,7 +18,7 @@ v8.7.0 #バージョン出ればOK
 
 ```
 npm -v
-sudo npm install -g npm
+npm install -g npm
 ```
 
 (sudo については環境で読み替えてください)  
@@ -27,7 +27,7 @@ sudo npm install -g npm
 ## gulpをグローバルにインストール（初回のみ）
 
 ```
-sudo npm install -g gulp
+npm install -g gulp
 ```  
 
 ## 各プロジェクトにインストール
@@ -111,8 +111,8 @@ project
 ## Gulpバージョン変更
 ##### グローバル
 ```
-sudo npm uninstall -g gulp
-sudo npm install -g gulp
+npm uninstall -g gulp
+npm install -g gulp
 ```
 
 ##### ローカル
