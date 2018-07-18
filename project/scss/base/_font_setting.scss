@@ -1,0 +1,117 @@
+@charset "utf-8";
+@import "../core/mixin";
+
+$base_font__color: #16160e;
+$link-color: #21759b;
+
+body {
+    line-height: 1.75;
+    @include font-size(16);
+    word-wrap : break-word;
+    overflow-wrap : break-word;
+    font-weight: normal;
+    font-family:Avenir, Verdana, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Roboto, Meiryo, sans-serif;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    color: $base_font__color;
+    text-align: justify;
+}
+
+a, a:link, a:active, a:visited {text-decoration: underline;outline: none;}
+a:hover, a:active {outline: 0;}
+a, a:visited, a:focus, a:active {color: $link-color;}
+a:hover {color: $link-color;}
+
+/*-----------------------------------------------
+ __fontfamily
+-----------------------------------------------*/
+.serif {
+    font-family: "リュウミン R-KL",'Ryumin Medium KL','Times New Roman', '游明朝', YuMincho, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'HG明朝E', '小塚明朝 ProN', 'メイリオ', Meiryo, serif;
+}
+
+/*--- google font ---*/
+
+// headにいれてね
+// <link href="//fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+// <link href="//fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+// <link href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+// <link href="//fonts.googleapis.com/css?family=Nunito" rel="stylesheet" />
+// <link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+.gf_sawarabi {font-family: "Sawarabi Mincho", serif;}
+.gf_roundedmplus1c {font-family: "Rounded Mplus 1c", sans-serif;}
+.gf_noto {font-family: "Noto Sans Japanese", sans-serif;}
+.gf_nunito {font-family: "Nunito", sans-serif;}
+.gf_roboto {font-family: "Roboto", sans-serif;}
+.gf_robotoslab {font-family: 'Roboto Slab', serif;}
+
+/*-----------------------------------------------
+ __fontweight
+-----------------------------------------------*/
+.fw700 {font-weight: 700;}
+.fw600 {font-weight: 600;}
+.fw500 {font-weight: 500;}
+.fw400 {font-weight: 400;}
+.fw300 {font-weight: 300;}
+
+/*-----------------------------------------------
+ __letterspacing centering
+-----------------------------------------------*/
+.lt1 {letter-spacing: .1em;text-indent: .1em;}
+.lt2 {letter-spacing: .2em;text-indent: .2em;}
+.lt3 {letter-spacing: .3em;text-indent: .3em;}
+
+/*-----------------------------------------------
+ __fontsize
+-----------------------------------------------*/
+
+.fz_36 {
+    font-size: 36px;
+    @include media(767px) {font-size: 30px;}
+    @include media(600px) {font-size: 24px;}
+}
+.fz_30 {
+    font-size: 30px;
+    @include media(767px) {font-size: 24px;}
+    @include media(600px) {font-size: 20px;}
+}
+.fz_28 {
+    font-size: 27px;
+    @include media(767px) {font-size: 23px;}
+    @include media(600px) {font-size: 19px;}
+}
+.fz_24 {
+    font-size: 24px;
+    @include media(767px) {font-size: 20px;}
+    @include media(600px) {font-size: 16px;}
+}
+.fz_20 {
+    font-size: 20px;
+    @include media(767px) {font-size: 18px;}
+    @include media(600px) {font-size: 15px;}
+}
+.fz_18 {
+    font-size: 18px;
+    @include media(767px) {font-size: 16px;}
+    @include media(600px) {font-size: 14px;}
+}
+.fz_16 {
+    font-size: 16px;
+    @include media(767px) {font-size: 14px;}
+}
+.fz_15 {
+    font-size: 15px;
+    @include media(767px) {font-size: 14px;}
+}
+.fz_14 {
+    font-size: 14px;
+    @include media(767px) {font-size: 13px;}
+}
+.fz_13 {
+    font-size: 13px;
+    @include media(600px) {font-size: 12px;}
+}
+.fz_12 {
+    font-size: 12px;
+    @include media(600px) {font-size: 10px;}
+}

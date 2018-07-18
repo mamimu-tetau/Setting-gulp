@@ -1,0 +1,36 @@
+// -- /* 20150219 */ --
+@mixin media($size){
+	@media screen and (max-width : $size){
+		@content;
+	}
+}
+@mixin min_media($size){
+	@media screen and (min-width : $size){
+		@content;
+	}
+}
+
+@mixin base-font-size($size, $base: 16) {
+	html {
+		font-size: $size/$base*100 + %;
+	}
+	body{
+		font-size: $size + px;
+		font-size: 1rem;
+	}
+}
+
+// -- /* 2014 */ --
+
+@mixin input-placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+
+@mixin font-size($size, $base: 16) {
+	font-size: $size + px;
+	font-size: ($size / $base) + rem;
+}
