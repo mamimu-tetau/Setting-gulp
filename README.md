@@ -173,10 +173,50 @@ macのapacheの設定がまだなら↓を行ってください。
 </VirtualHost>
 npm install gulp-sass gulp-autoprefixer gulp-sourcemaps gulp-filter gulp-notify gulp-plumber browser-sync --save-dev
 ```  
-さらに
+さらにhostsファイルにこちらも追記
+``` 
+127.0.0.1 localhost.mamimu.div
+``` 
+準備完了！
 
-browserSyncも使うので今回はhostsファイル
+## こんどこそ動かしてみましょう。
 
+#### プロジェクトフォルダに移動
+ターミナルを立ち上げて上記でダウンロードしたディレクトリに移動します。
+```
+cd /Users/あんたのユーザー名/ダウンロードしたフォルダ/project/
+```
+で
+```
+gulp
+```
+```
+[23:05:22] Using gulpfile ~/localhost/mamimu.div/gulpfile.js
+[23:05:22] Starting 'browser-sync'...
+[23:05:22] Finished 'browser-sync' after 106 ms
+[23:05:22] Starting 'default'...
+[23:05:24] Finished 'default' after 1.68 s
+[Browsersync] Proxying: http://localhost.mamimu.div
+[Browsersync] Access URLs:
+ --------------------------------------
+       Local: http://localhost:3000
+    External: http://10.252.29.236:3000
+ --------------------------------------
+          UI: http://localhost:3001
+ UI External: http://10.252.29.236:3001
+ --------------------------------------
+```
+こんなのがでてブラウザがlocalhost:3000で立ち上がり表示されるとOK。  
+scssファイルを保存すると
+```
+[23:06:18] Starting 'sass'...
+[23:06:18] Finished 'sass' after 15 ms
+[Browsersync] 2 files changed (default.css, style.css)
+```
+こんな感じでブラウザが更新される。はず  
+で終了する時は
+```contorl + c```キーで終わります。
+<br><br><br>
 
 
 
