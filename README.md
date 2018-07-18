@@ -5,27 +5,18 @@
 <br><br><br>
 
 
-## node.jsのインストール（初回のみ）
-公式サイトからインストーラーをダウンロード
-https://nodejs.org/en/
-バージョン管理とかする場合はゴニョゴニョしてください。
-node.jsをインストールをするとnpmコマンドが使えるようになります。
-```
-node -v
-v8.7.0 #バージョン出ればOK
-```
+## 将来的にvccwやその他の開発系フレームワークとか使うならhomebrewとnodebrewでnode.jsのインストールを強くお勧めします。
+[nodeのインストール](https://github.com/mamimu-tetau/vccw)
+こちらでnodeのインストールまでを済ませてください。
 <br><br><br>
 
 
-
-##### npmのバージョンを最新にしておく
-
+## npmのバージョンを最新にしておく
 ```
 npm -v
 npm install -g npm
 ```
-
-(sudo については環境で読み替えてください)  
+ 
 
 
 ## gulpをグローバルにインストール（初回のみ）
