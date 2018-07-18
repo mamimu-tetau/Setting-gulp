@@ -48,6 +48,8 @@ project
   ├── gulpfile.js
   ├── package.json
 ```
+<br><br><br>
+
 
 ## プロジェクトフォルダに移動
 ターミナルを立ち上げて上記でダウンロードしたディレクトリに移動します。
@@ -152,6 +154,12 @@ npm install gulp-cssmin gulp-imagemin imagemin-mozjpeg gulp-uglify imagemin-pngq
 * imagemin-pngquant png圧縮（要検討）
 * gulp-uglify js圧縮（要検討） 
 <br><br><br>
+
+
+# 実際に動かしてみましょう。
+browserSyncも使うので今回はhostsファイル
+
+
 
 
 # 余談
