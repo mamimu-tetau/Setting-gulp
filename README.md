@@ -157,6 +157,24 @@ npm install gulp-cssmin gulp-imagemin imagemin-mozjpeg gulp-uglify imagemin-pngq
 
 
 # 実際に動かしてみましょう。
+
+macのapacheの設定がまだなら↓を行ってください。
+[macのapacheとかもろもrも](https://github.com/mamimu-tetau/mac-apache)
+<br><br>
+で上記URLのバーチャルホストを記入するところで今回のやつを追記
+```
+<VirtualHost *:80>
+    serverName localhost.mamimu.div
+    #作業フォルダ
+    DocumentRoot "/Users/あんたのユーザー名/ダウンロードしたフォルダ/project/src"
+	<Directory "/Users/あんたのユーザー名/ダウンロードしたフォルダ/project/src">
+		Require all granted
+	</Directory>
+</VirtualHost>
+npm install gulp-sass gulp-autoprefixer gulp-sourcemaps gulp-filter gulp-notify gulp-plumber browser-sync --save-dev
+```  
+さらに
+
 browserSyncも使うので今回はhostsファイル
 
 
