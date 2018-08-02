@@ -237,5 +237,33 @@ npm install gulp --save-dev
 ```
 <br><br><br>
 
+# TroubleShoot
+
 ## BrowserSync
 はまりどころbodyタグ抜けてるとダメす
+<br><br><br>
+
+## BrowserSyncでerror ポート使ってるよ系
+Chrome68にアップしたらポート使ってるよみたいなエラーがでたよ。
+```
+events.js:183
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::3000
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1355:14)
+    at listenInCluster (net.js:1396:12)
+    at Server.listen (net.js:1480:7)
+```
+gulpfile.jsのポートを変えてみる
+```
+gulp.task('browser-sync', function () {
+	browserSync({
+		notify: false,
+		port: 3010,
+		proxy: "http://localhost.senzanan.com"
+	});
+});
+```
