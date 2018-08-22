@@ -171,7 +171,7 @@ macのapacheの設定がまだなら↓を行ってください。
 		Require all granted
 	</Directory>
 </VirtualHost>
-npm install gulp-sass gulp-autoprefixer gulp-sourcemaps gulp-filter gulp-notify gulp-plumber browser-sync --save-dev
+
 ```  
 さらにhostsファイルにこちらも追記
 ``` 
