@@ -243,8 +243,12 @@ npm install gulp --save-dev
 はまりどころbodyタグ抜けてるとダメす
 <br><br><br>
 
-## BrowserSyncでerror ポート使ってるよ系
+
+
+## BrowserSyncでerror系
 Chrome68にアップしたらポート使ってるよみたいなエラーがでたよ。
+
+
 ```
 events.js:183
       throw er; // Unhandled 'error' event
@@ -257,6 +261,11 @@ Error: listen EADDRINUSE :::3000
     at listenInCluster (net.js:1396:12)
     at Server.listen (net.js:1480:7)
 ```
+
+他でgulp起動してんじゃない？
+
+
+
 gulpfile.jsのポートを変えてみる
 ```
 gulp.task('browser-sync', function () {
@@ -267,3 +276,6 @@ gulp.task('browser-sync', function () {
 	});
 });
 ```
+
+
+
