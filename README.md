@@ -230,11 +230,30 @@ npm install -g gulp
 ```
 <br><br><br>
 
-##### ローカル
+#### ローカル
 ```
 npm uninstall gulp --save-dev
 npm install gulp --save-dev
 ```
+<br><br><br>
+
+#### gulp 4 をインストールしたい！
+他の案件は gulp3 でやっちゃってるんだけどという他のプロジェクトとバッティングしないかという問題。
+
+```
+npm install gulp --save-dev
+これでは3X系がインストールされる。なので
+
+ローカルのプロジェクトフォルダまでいって
+npm install gulp@next -D
+```
+でもこれでは動かない。
+npmのバージョン5.2.0で導入されたnpxを使うらしい。
+```
+npx gulp
+
+```
+あとはgulpfile.jsの問題
 <br><br><br>
 
 # TroubleShoot
