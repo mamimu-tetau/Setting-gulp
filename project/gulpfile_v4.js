@@ -1,15 +1,15 @@
 //Sassコンパイル
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var plumber = require("gulp-plumber");
-var sourcemaps = require('gulp-sourcemaps');
-var filter = require('gulp-filter');
-var notify = require('gulp-notify');
-var browserSync = require('browser-sync');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const plumber = require("gulp-plumber");
+const sourcemaps = require('gulp-sourcemaps');
+const filter = require('gulp-filter');
+const notify = require('gulp-notify');
+const browserSync = require('browser-sync');
 
 
-var path = {
+const path = {
     base:'./',
     scss:'./scss/**/*.scss',
    image:'./assets/images/**/*',
