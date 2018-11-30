@@ -185,7 +185,7 @@ cd /Users/あんたのユーザー名/ダウンロードしたフォルダ/proje
 ```
 で
 ```
-gulp
+npx gulp
 ```
 ```
 [23:05:22] Using gulpfile ~/localhost/mamimu.div/gulpfile.js
