@@ -12,6 +12,8 @@
 
 
 ## gulpをグローバルにインストール（初回のみ）
+すべてターミナルでの作業です。
+
 ```
 npm install -g gulp
 ```  
@@ -113,15 +115,10 @@ Is this OK? (yes)
 ## gulpのローカルインストール
 
 ```
-npm install gulp --save-dev
+npm install gulp@next -D
 ```
-できる限りバージョンはCLIと合わせる。
-毎回プロジェクトごとに最新版をインストールしているとグローバルのgulpとバージョンがあわなくなるのでその時はグローバルもアップデート。
-
-##### --saveと--save-dev
-違いはようわからんすのでgoogleさんに聞いて。  
-で、なんで付けるかというとnpm install で --save をつけると、 package.json にインストールしたパッケージ名とそのバージョンが自動的に保存され、他で同じ環境を作ることが出来る。  
-[参考:面倒な作業も発狂しない！Web制作を超効率化するgulp.jsの始め方考](https://www.webprofessional.jp/introduction-gulp-js/)
+nodeのアップデートやその他のプラグインのこともあり、Gulpをv4にアップしました。
+CLIは多分3.9のまま？CLIを4に上げる方法教えて。
 <br><br><br>
 
 
@@ -129,7 +126,7 @@ npm install gulp --save-dev
 
 ##### Sassコンパイル + browser-sync
 ```
-npm install gulp-sass gulp-autoprefixer gulp-sourcemaps gulp-filter gulp-notify gulp-plumber browser-sync --save-dev
+npm install -D gulp-sass gulp-autoprefixer gulp-sourcemaps gulp-filter gulp-notify gulp-plumber browser-sync
 ```  
 
 * gulp-sass Sassのコンパイル
@@ -145,7 +142,7 @@ npm install gulp-sass gulp-autoprefixer gulp-sourcemaps gulp-filter gulp-notify 
 sassのコンパイルだけが目的ならこちらはスルーでOK
 
 ```
-npm install gulp-cssmin gulp-imagemin imagemin-mozjpeg gulp-uglify imagemin-pngquant --save-dev
+npm install -D gulp-cssmin gulp-imagemin imagemin-mozjpeg gulp-uglify imagemin-pngquant
 ```  
 
 * gulp-cssmin CSS Minify
@@ -232,8 +229,8 @@ npm install -g gulp
 
 #### ローカル
 ```
-npm uninstall gulp --save-dev
-npm install gulp --save-dev
+npm uninstall -D gulp
+npm install -D gulp
 ```
 <br><br><br>
 
@@ -241,7 +238,7 @@ npm install gulp --save-dev
 他の案件は gulp3 でやっちゃってるんだけどという他のプロジェクトとバッティングしないかという問題。
 
 ```
-npm install gulp --save-dev
+npm install -D gulp
 これでは3X系がインストールされる。なので
 
 ローカルのプロジェクトフォルダまでいって
