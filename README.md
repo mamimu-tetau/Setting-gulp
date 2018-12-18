@@ -115,7 +115,7 @@ Is this OK? (yes)
 ## gulpのローカルインストール
 
 ```
-npm install gulp@next -D
+npm install gulp
 ```
 nodeのアップデートやその他のプラグインのこともあり、Gulpをv4にアップしました。
 CLIは多分3.9のまま？CLIを4に上げる方法教えて。
@@ -126,7 +126,7 @@ CLIは多分3.9のまま？CLIを4に上げる方法教えて。
 
 ##### Sassコンパイル + browser-sync
 ```
-npm install -D gulp-sass gulp-autoprefixer gulp-sourcemaps gulp-filter gulp-notify gulp-plumber browser-sync
+npm install gulp-sass gulp-autoprefixer gulp-sourcemaps gulp-filter gulp-notify gulp-plumber browser-sync -D
 ```  
 
 * gulp-sass Sassのコンパイル
