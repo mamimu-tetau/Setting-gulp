@@ -62,3 +62,70 @@ gulp.task('watch', function() {
 gulp.task('default',
     gulp.parallel('server','watch')
 );
+
+
+
+// deploy
+const destDir = 'public_html/'; // Minify出力用ディレクトリ
+
+gulp.task('filecopy', function() {
+    gulp.src([
+        'src/**/*',
+        '!src/_**/*',
+        '!src/**/_*',
+        '!src/scss/*',
+        '!src/assets/js/_**/*',
+        '!src/assets/js/**/*.js',
+        '!src/assets/css/_**/*',
+        '!src/assets/css/**/*.css',
+        '!src/assets/images/**/*'
+    ])
+    .pipe(gulp.dest(destDir));
+});
+
+//CSS圧縮
+const cssmin = require('gulp-cssmin');
+gulp.task('cssmin', function () {
+    gulp.src('src/assets/css/**/*.css')
+        .pipe(plumber())
+        .pipe(cssmin())
+        .pipe(gulp.dest(destDir+'assets/css/'));
+});
+
+
+//JS圧縮
+const uglify = require('gulp-uglify');
+gulp.task('jsmin', function() {
+    gulp.src('src/assets/js/**/*.js')
+        .pipe(plumber())
+        .pipe(uglify())
+        .pipe(gulp.dest(destDir+'assets/js/'));
+});
+
+// 画像圧縮
+const imagemin = require('gulp-imagemin');
+const mozjpeg = require('imagemin-mozjpeg');
+const pngquant = require('imagemin-pngquant');
+gulp.task('imagemin', function(){
+    gulp.src(['src/assets/images/**/*.{jpeg,jpg,png,gif}'])
+        .pipe(imagemin([
+                pngquant({
+                    quality: '60-80',
+                    speed: 1,
+                    floyd:0
+                }),
+                mozjpeg({
+                    quality:80,
+                    progressive: true
+                }),
+                imagemin.svgo(),
+                imagemin.optipng(),
+                imagemin.gifsicle()
+            ]
+        ))
+        .pipe(gulp.dest(destDir+'assets/images/'));
+});
+
+gulp.task('deploy',
+    gulp.parallel('filecopy','cssmin','jsmin','imagemin')
+);
