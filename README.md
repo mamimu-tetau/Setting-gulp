@@ -46,7 +46,7 @@ project
   │       ├── css
   │       ├── images
   │       ├── js
-  │       ├── scss
+  │ 
   ├── gulpfile.js
   ├── package.json
 ```
