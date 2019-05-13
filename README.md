@@ -104,7 +104,7 @@ Is this OK? (yes)
 ## gulpのローカルインストール
 
 ```
-npm install gulp
+npm install gulp -D
 ```
 nodeのアップデートやその他のプラグインのこともあり、Gulpをv4にアップしました。
 CLIは多分3.9のまま？CLIを4に上げる方法教えて。
@@ -174,7 +174,7 @@ cd /Users/あんたのユーザー名/ダウンロードしたフォルダ/proje
 ```
 で
 ```
-npx gulp
+gulp
 ```
 ```
 [23:05:22] Using gulpfile ~/localhost/mamimu.div/gulpfile.js
