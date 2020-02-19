@@ -1,7 +1,7 @@
 ## コーディングを始めるためのパソコンのセットアップ
 ***
 1. エディタのインストール(Brackets、SublimeText、Atom、DWなどなど)
-2. [Macのプリインストールapacheの設定(静的サイト作成用)]()
+2. [Macのプリインストールapacheの設定(静的サイト作成用)](https://github.com/mamimu-tetau/Setting-mac-apache)
 3. [sshの設定(サーバ接続、Gitリモート接続用)]()
 4. [nodeのインストール(Gulp用)]()
 5. [Gulpのインストール](https://github.com/mamimu-tetau/Setting-gulp)
@@ -170,28 +170,52 @@ $ npm install -D gulp-cssmin gulp-imagemin imagemin-mozjpeg gulp-uglify imagemin
 
 
 
-### 実際に動かしてみましょう。
-
+### 実際に動かす準備
+***
 macのapacheの設定がまだなら↓を行ってください。
-[macのapacheとかもろもrも](https://github.com/mamimu-tetau/mac-apache)
+[Macのプリインストールapacheの設定(静的サイト作成用)](https://github.com/mamimu-tetau/Setting-mac-apache)
 <br><br>
-で上記URLのバーチャルホストを記入するところで今回のやつを追記
+
+#### httpd-vhost.confに追記
+Finderから`Command + Shift +G`で移動先に`~/.ssh`<br />
+viでやっちゃうよ！って方はご自由に。<br />
+
+ファイルの場所
+```
+/private/etc/apache2/extra/httpd-vhosts.conf
+```
+
+httpd-vhost.conf
 ```
 <VirtualHost *:80>
-    serverName localhost.mamimu.div
+    serverName localhost.使用するローカル用ドメイン名
     #作業フォルダ
     DocumentRoot "/Users/あんたのユーザー名/ダウンロードしたフォルダ/project/src"
     <Directory "/Users/あんたのユーザー名/ダウンロードしたフォルダ/project/src">
         Require all granted
     </Directory>
 </VirtualHost>
+```
+使用するローカル用ドメイン名は`localhost.+本番ドメイン`など決めておいたほうがいいかも。<br />
+これでhttpd-vhost.confの設定終わり。保存して閉じます。<br />
+閉じる時にパスワード聞かれるかも。それでも保存できない場合は権限を追加するなりエディタ変えるなり。
 
-```  
-さらにhostsファイルにこちらも追記
+#### hosts編集
+上記のバーチャルホストで設定したローカル用ドメイン名を有効にします。
+hostsファイルは慎重に取り扱ってください。間違うとmac壊れるかもしれませんw
+```
+$ sudo vi /private/etc/hosts
+```
+`sudo`なしで動くならなしで。
+```
+hosts
 ``` 
 127.0.0.1 localhost.mamimu.div
 ``` 
-準備完了！
+最後の行とかに追記。
+<br><br><br>
+
+
 
 ## こんどこそ動かしてみましょう。
 
