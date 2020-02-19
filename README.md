@@ -13,7 +13,7 @@
 - [Gulpをグローバルにインストール(初回のみの作業)](#gulpをグローバルにインストール初回のみの作業)
 - [Gulpをプロジェクトごとにインストール(プロジェクトごとに必要)](#gulpをプロジェクトごとにインストールプロジェクトごとに必要)
 - [Gulpのローカルインストール](#gulpのローカルインストール)
-- [](#)
+- [Gulpプラグインをインストール](#gulpプラグインをインストール)
 - [](#)
 - [](#)
 
@@ -24,15 +24,15 @@
 ***
 #### npmのバージョンを最新にしておく
 ```
-npm install -g npm
+$ npm install -g npm
 ```
 #### Gulpをグローバルにインストール
 ```
-npm i -g gulp
+$ npm i -g gulp
 ```
 #### 確認
 ```
-gulp -v
+$ gulp -v
 ```
 `CLI version: 2.2.0`とかが出ればOK
 <br><br><br>
@@ -43,10 +43,9 @@ gulp -v
 #### npmのバージョンを最新にしておく
 できる限りこちは時間がある時に最新版にアップデートしておいてください。
 ```
-npm install -g npm
+$ npm install -g npm
 ```
 <br><br>
-
 今回はこのリポジトリにサンプルを用意したいのでgit cloneかzipとかでダウンロードしてください。
 <br><br>
 #### 静的サイトのディレクトリ構成はこんな感じ
@@ -65,7 +64,7 @@ project
   ├── gulpfile.js
   ├── package.json
 ```
-<br><br>
+
 #### Wordpressのディレクトリ構成はこんな感じ
 ```
 themes
@@ -81,12 +80,11 @@ themes
           ├── images
           ├── js
 ```
-<br><br>
 
 #### プロジェクトフォルダに移動
 ターミナルを立ち上げて上記でダウンロードしたディレクトリに移動します。
 ```
-cd C:\hoge\fuga\piyo\project
+$ cd C:\hoge\fuga\piyo\project
 ```
 ターミナルにそのフォルダをドロップするとパス勝手に入ります。便利
 
@@ -94,7 +92,7 @@ cd C:\hoge\fuga\piyo\project
 インストールしたパッケージとか一覧で見れるから作っておいた方が便利ですが簡単なプロジェクトならスルーでOK。
 プロジェクト名やらなんやら設定が出てくるから必要なら設定
 ```
-npm init
+$ npm init
 ```
 プロジェクト名やらなんやら設定が出てくるから必要なら設定。
 enterで進んでいく。で最後にyes
@@ -134,21 +132,19 @@ Is this OK? (yes)
 
 
 
-## Gulpのローカルインストール
-
+### Gulpのローカルインストール
+***
 ```
-npm install gulp -D
+$ npm install gulp -D
 ```
-nodeのアップデートやその他のプラグインのこともあり、Gulpをv4にアップしました。
-CLIは多分3.9のまま？CLIを4に上げる方法教えて。
 <br><br><br>
 
 
-## gulpプラグインをインストール
-
-##### Sassコンパイル + browser-sync
+### Gulpプラグインをインストール
+***
+#### Sassコンパイル + browser-sync
 ```
-npm install gulp-sass gulp-autoprefixer gulp-sourcemaps gulp-filter gulp-notify gulp-plumber browser-sync -D
+$ npm install gulp-sass gulp-autoprefixer gulp-sourcemaps gulp-filter gulp-notify gulp-plumber browser-sync -D
 ```  
 
 * gulp-sass Sassのコンパイル
@@ -160,11 +156,9 @@ npm install gulp-sass gulp-autoprefixer gulp-sourcemaps gulp-filter gulp-notify 
 * browser-sync ファイル変更を監視し、自動でブラウザリロードを行ってくれる  
 <br><br><br>
 
-##### + Minify
-sassのコンパイルだけが目的ならこちらはスルーでOK
-
+#### + Minify系(sassのコンパイルだけが目的ならこちらはスルーでOK)
 ```
-npm install -D gulp-cssmin gulp-imagemin imagemin-mozjpeg gulp-uglify imagemin-pngquant
+$ npm install -D gulp-cssmin gulp-imagemin imagemin-mozjpeg gulp-uglify imagemin-pngquant
 ```  
 
 * gulp-cssmin CSS Minify
@@ -175,7 +169,8 @@ npm install -D gulp-cssmin gulp-imagemin imagemin-mozjpeg gulp-uglify imagemin-p
 <br><br><br>
 
 
-# 実際に動かしてみましょう。
+
+### 実際に動かしてみましょう。
 
 macのapacheの設定がまだなら↓を行ってください。
 [macのapacheとかもろもrも](https://github.com/mamimu-tetau/mac-apache)
