@@ -14,9 +14,9 @@
 - [Gulpをプロジェクトごとにインストール(プロジェクトごとに必要)](#gulpをプロジェクトごとにインストールプロジェクトごとに必要)
 - [Gulpのローカルインストール](#gulpのローカルインストール)
 - [Gulpプラグインをインストール](#gulpプラグインをインストール)
-- [](#)
-- [](#)
-
+- [実際に動かす準備](#実際に動かす準備)
+- [動かしてみましょう。](#動かしてみましょう。)
+- [TroubleShoot](#troubleShoot)
 <br><br><br>
 
 
@@ -218,16 +218,16 @@ hosts
 
 
 
-## こんどこそ動かしてみましょう。
-
+### 動かしてみましょう。
+***
 #### プロジェクトフォルダに移動
 ターミナルを立ち上げて上記でダウンロードしたディレクトリに移動します。
 ```
-cd /Users/あんたのユーザー名/ダウンロードしたフォルダ/project/
+$ cd /Users/あんたのユーザー名/ダウンロードしたフォルダ/project/
 ```
 で
 ```
-gulp
+$ gulp
 ```
 ```
 [23:05:22] Using gulpfile ~/localhost/mamimu.div/gulpfile.js
@@ -260,15 +260,15 @@ scssファイルを保存すると
 
 
 # 余談
-
-## Gulpバージョン変更
-##### グローバル
+<br><br>
+### Gulpバージョン変更
+***
+#### グローバル
 ```
 npm uninstall -g gulp
 npm install -g gulp
 ```
-<br><br><br>
-
+<br><br>
 #### ローカル
 ```
 npm uninstall -D gulp
@@ -276,42 +276,23 @@ npm install -D gulp
 ```
 <br><br><br>
 
-#### gulp 4 をインストールしたい！
-他の案件は gulp3 でやっちゃってるんだけどという他のプロジェクトとバッティングしないかという問題。
-
-```
-npm install -D gulp
-これでは3X系がインストールされる。なので
-
-ローカルのプロジェクトフォルダまでいって
-npm install gulp@next -D
-```
-でもこれでは動かない。
-npmのバージョン5.2.0で導入されたnpxを使うらしい。
-```
-npx gulp
-
-```
-あとはgulpfile.jsの問題
-<br><br><br>
 
 # TroubleShoot
-
-## BrowserSync
+<br><br>
+### BrowserSync
+***
+```
 はまりどころbodyタグ抜けてるとダメす
-<br><br><br>
+```
+<br><br>
 
-
-
-## BrowserSyncでerror系
+### BrowserSyncでerror系
+***
 Chrome68にアップしたらポート使ってるよみたいなエラーがでたよ。
-
-
 ```
 events.js:183
       throw er; // Unhandled 'error' event
       ^
-
 Error: listen EADDRINUSE :::3000
     at Object._errnoException (util.js:992:11)
     at _exceptionWithHostPort (util.js:1014:20)
@@ -319,12 +300,9 @@ Error: listen EADDRINUSE :::3000
     at listenInCluster (net.js:1396:12)
     at Server.listen (net.js:1480:7)
 ```
-
-他でgulp起動してんじゃない？
-
-
-
-gulpfile.jsのポートを変えてみる
+`他でgulp起動してんじゃない？`<br>
+または<br>
+`gulpfile.jsのポートを変えてみる`
 ```
 gulp.task('browser-sync', function () {
     browserSync({
