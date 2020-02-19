@@ -154,7 +154,7 @@ $ npm install gulp-sass gulp-autoprefixer gulp-sourcemaps gulp-filter gulp-notif
 * gulp-notify　デスクトップ通知
 * gulp-plumber エラーが発生しても落ちないように  
 * browser-sync ファイル変更を監視し、自動でブラウザリロードを行ってくれる  
-<br><br><br>
+<br><br>
 
 #### + Minify系(sassのコンパイルだけが目的ならこちらはスルーでOK)
 ```
@@ -172,7 +172,7 @@ $ npm install -D gulp-cssmin gulp-imagemin imagemin-mozjpeg gulp-uglify imagemin
 
 ### 実際に動かす準備
 ***
-macのapacheの設定がまだなら↓を行ってください。
+macのapacheの設定がまだなら↓を行ってください。<br />
 [Macのプリインストールapacheの設定(静的サイト作成用)](https://github.com/mamimu-tetau/Setting-mac-apache)
 <br><br>
 
@@ -199,6 +199,7 @@ httpd-vhost.conf
 使用するローカル用ドメイン名は`localhost.+本番ドメイン`など決めておいたほうがいいかも。<br />
 これでhttpd-vhost.confの設定終わり。保存して閉じます。<br />
 閉じる時にパスワード聞かれるかも。それでも保存できない場合は権限を追加するなりエディタ変えるなり。
+<br /><br />
 
 #### hosts編集
 上記のバーチャルホストで設定したローカル用ドメイン名を有効にします。
@@ -207,7 +208,7 @@ hostsファイルは慎重に取り扱ってください。間違うとmac壊れ
 $ sudo vi /private/etc/hosts
 ```
 `sudo`なしで動くならなしで。
-```
+
 hosts
 ``` 
 127.0.0.1 localhost.mamimu.div
