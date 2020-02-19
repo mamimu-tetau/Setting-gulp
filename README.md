@@ -1,4 +1,15 @@
-## gulpを利用するためのステップ
+# コーディングを始めるためのパソコンのセットアップ
+1.エディタのインストール(Brackets、SublimeText、Atom、DWなどなど)
+2.Macのプリインストールapacheの設定(静的サイト作成用)
+3.sshの設定(サーバ接続、Gitリモート接続用)
+4.nodeのインストール(Gulp用)
+5.Gulpのインストール
+<br><br><br>
+
+
+
+
+gulpを利用するためのステップ
 * node.jsのインストール（初回のみ）
 * gulpを各プロジェクトにインストール  
 <br><br><br>
@@ -169,9 +180,9 @@ macのapacheの設定がまだなら↓を行ってください。
     serverName localhost.mamimu.div
     #作業フォルダ
     DocumentRoot "/Users/あんたのユーザー名/ダウンロードしたフォルダ/project/src"
-	<Directory "/Users/あんたのユーザー名/ダウンロードしたフォルダ/project/src">
-		Require all granted
-	</Directory>
+    <Directory "/Users/あんたのユーザー名/ダウンロードしたフォルダ/project/src">
+        Require all granted
+    </Directory>
 </VirtualHost>
 
 ```  
@@ -290,11 +301,11 @@ Error: listen EADDRINUSE :::3000
 gulpfile.jsのポートを変えてみる
 ```
 gulp.task('browser-sync', function () {
-	browserSync({
-		notify: false,
-		port: 3010,
-		proxy: "http://localhost.senzanan.com"
-	});
+    browserSync({
+        notify: false,
+        port: 3010,
+        proxy: "http://localhost.senzanan.com"
+    });
 });
 ```
 
