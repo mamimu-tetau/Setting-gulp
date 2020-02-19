@@ -1,37 +1,25 @@
-# コーディングを始めるためのパソコンのセットアップ
+## コーディングを始めるためのパソコンのセットアップ
 ***
 1. エディタのインストール(Brackets、SublimeText、Atom、DWなどなど)
-2. Macのプリインストールapacheの設定(静的サイト作成用)
-3. sshの設定(サーバ接続、Gitリモート接続用)
-4. nodeのインストール(Gulp用)
-5. Gulpのインストール
+2. [Macのプリインストールapacheの設定(静的サイト作成用)]()
+3. [sshの設定(サーバ接続、Gitリモート接続用)]()
+4. [nodeのインストール(Gulp用)]()
+5. [Gulpのインストール](https://github.com/mamimu-tetau/Setting-gulp)
 ***
 <br><br><br>
 
+# 5. Gulpのインストール
 
-
-
-gulpを利用するためのステップ
-* node.jsのインストール（初回のみ）
-* gulpを各プロジェクトにインストール  
-<br><br><br>
-
-
-## 将来的にvccwやその他の開発系フレームワークとか使うならhomebrewとnodebrewでnode.jsのインストールを強くお勧めします。
-[nodeのインストール](https://github.com/mamimu-tetau/vccw)
-こちらでnodeのインストールまでを済ませてください。
-<br><br><br>
-
-# ここからは初回のみの作業
-## npmのバージョンを最新にしておく
+## ここからは初回のみの作業
+### npmのバージョンを最新にしておく
 ```
 npm install -g npm
 ```
-## Gulpをグローバルにインストール
+### Gulpをグローバルにインストール
 ```
 npm i -g gulp
 ```
-## 確認
+### 確認
 ```
 gulp -v
 ```
