@@ -1,9 +1,9 @@
 # コーディングを始めるためのパソコンのセットアップ
-1.エディタのインストール(Brackets、SublimeText、Atom、DWなどなど)
-2.Macのプリインストールapacheの設定(静的サイト作成用)
-3.sshの設定(サーバ接続、Gitリモート接続用)
-4.nodeのインストール(Gulp用)
-5.Gulpのインストール
+1. エディタのインストール(Brackets、SublimeText、Atom、DWなどなど)
+2. Macのプリインストールapacheの設定(静的サイト作成用)
+3. sshの設定(サーバ接続、Gitリモート接続用)
+4. nodeのインストール(Gulp用)
+5. Gulpのインストール
 <br><br><br>
 
 
