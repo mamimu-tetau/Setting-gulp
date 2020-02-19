@@ -15,7 +15,7 @@
 
 
 ### Gulpをグローバルにインストール(初回のみの作業)
-
+<br><br>
 #### npmのバージョンを最新にしておく
 ```
 npm install -g npm
@@ -32,10 +32,10 @@ gulp -v
 <br><br><br>
 
 
-# プロジェクトごとに行う作業
-<br><br><br>
+### Gulpをプロジェクトごとにインストール(プロジェクトごとに必要)
+<br><br>
 
-## npmのバージョンを最新にしておく
+#### npmのバージョンを最新にしておく
 できる限りこちは時間がある時に最新版にアップデートしておいてください。
 ```
 npm install -g npm
@@ -45,7 +45,7 @@ npm install -g npm
 
 今回はこのリポジトリにサンプルを用意したいのでgit cloneかzipとかでダウンロードしてください。
 <br><br>
-## 静的サイトのディレクトリ構成はこんな感じ
+#### 静的サイトのディレクトリ構成はこんな感じ
 ```
 project
   ├── node_modules
@@ -61,19 +61,32 @@ project
   ├── gulpfile.js
   ├── package.json
 ```
-<br><br><br>
+<br><br>
+#### Wordpressのディレクトリ構成はこんな感じ
+```
+themes
+  ├── テーマ名
+      ├── node_modules
+      ├── gulpfile.js
+      ├── package.json
+      │
+      ├── scss/*.scss
+      ├── *.php
+      └── assets
+          ├── css
+          ├── images
+          ├── js
+```
+<br><br>
 
-
-## プロジェクトフォルダに移動
+#### プロジェクトフォルダに移動
 ターミナルを立ち上げて上記でダウンロードしたディレクトリに移動します。
 ```
 cd C:\hoge\fuga\piyo\project
 ```
 ターミナルにそのフォルダをドロップするとパス勝手に入ります。便利
-<br><br><br>
 
-
-## package.jsonの作成
+#### package.jsonの作成
 インストールしたパッケージとか一覧で見れるから作っておいた方が便利ですが簡単なプロジェクトならスルーでOK。
 プロジェクト名やらなんやら設定が出てくるから必要なら設定
 ```
@@ -84,13 +97,10 @@ enterで進んでいく。で最後にyes
 ```
 This utility will walk you through creating a package.json file.
 It only covers the most common items, and tries to guess sensible defaults.
-
 See `npm help json` for definitive documentation on these fields
 and exactly what they do.
-
 Use `npm install <pkg>` afterwards to install a package and
 save it as a dependency in the package.json file.
-
 Press ^C at any time to quit.
 package name: (desktop) 
 version: (1.0.0) 
@@ -102,7 +112,6 @@ keywords:
 author: 
 license: (ISC) 
 About to write to /Users/hacca/Desktop/package.json:
-
 {
   "name": "desktop",
   "version": "1.0.0",
@@ -114,8 +123,6 @@ About to write to /Users/hacca/Desktop/package.json:
   "author": "",
   "license": "ISC"
 }
-
-
 Is this OK? (yes) 
 ```
 こんな感じの出る。
