@@ -5,6 +5,7 @@
 3. [sshの設定(サーバ接続、Gitリモート接続用)](https://github.com/mamimu-tetau/Setting-ssh)
 4. [nodeのインストール(Gulp用)](https://github.com/mamimu-tetau/Setting-Install-node)
 5. [Gulpのインストール](https://github.com/mamimu-tetau/Setting-gulp)
+6. [Sorcetreeのインストールと設定](https://github.com/mamimu-tetau/Setting-Sorcetree)
 ***
 <br><br><br>
 
