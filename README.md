@@ -260,7 +260,7 @@ scssファイルを保存すると
 
 
 # 余談
-<br><br>
+
 ### Gulpバージョン変更
 ***
 #### グローバル
@@ -278,7 +278,7 @@ npm install -D gulp
 
 
 # TroubleShoot
-<br><br>
+
 ### BrowserSync
 ***
 ```
