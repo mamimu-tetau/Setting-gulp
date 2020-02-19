@@ -329,7 +329,7 @@ package-lock.json<br>
 node_modules<br>
 を削除。
 
-んで[### Gulpのローカルインストール](#gulpのローカルインストール)
+んで[Gulpのインストール](#Gulpをプロジェクトごとにインストールプロジェクトごとに必要)
 
 
 
