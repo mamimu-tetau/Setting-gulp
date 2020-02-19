@@ -313,6 +313,7 @@ gulp.task('browser-sync', function () {
     });
 });
 ```
+<br><br><br>
 
 ### throw new Error
 ***
@@ -322,13 +323,13 @@ throw new Error(errors.missingBinary());
 ```
 `たぶん各パッケージとnodeのバージョンとかが合っていない`<br>
 もうこの際npm initから再度Gulpインストールしたほうがいいかも。<br>
-該当ディレクトリの
+該当ディレクトリの<br>
 package.json<br>
 package-lock.json<br>
 node_modules<br>
 を削除。
 
-んで[### Gulpのローカルインストール](gulpのローカルインストール)
+んで[### Gulpのローカルインストール](#gulpのローカルインストール)
 
 
 
