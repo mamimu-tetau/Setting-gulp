@@ -2,8 +2,8 @@
 ***
 1. エディタのインストール(Brackets、SublimeText、Atom、DWなどなど)
 2. [Macのプリインストールapacheの設定(静的サイト作成用)](https://github.com/mamimu-tetau/Setting-mac-apache)
-3. [sshの設定(サーバ接続、Gitリモート接続用)]()
-4. [nodeのインストール(Gulp用)]()
+3. [sshの設定(サーバ接続、Gitリモート接続用)](https://github.com/mamimu-tetau/Setting-ssh)
+4. [nodeのインストール(Gulp用)](https://github.com/mamimu-tetau/Setting-Install-node)
 5. [Gulpのインストール](https://github.com/mamimu-tetau/Setting-gulp)
 ***
 <br><br><br>
